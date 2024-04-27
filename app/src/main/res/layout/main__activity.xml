@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+#######################################################
+*
+*   Maintained 2017-2023 by Gregor Santner <group_29 AT mailbox DOT org>
+*
+*   License of this file: Apache 2.0
+*     https://www.apache.org/licenses/LICENSE-2.0
+*
+#########################################################
+-->
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_content"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:fitsSystemWindows="false"
+    android:theme="@style/AppTheme.Unified"
+    tools:context="net.group_29.master.activity.MainActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:theme="@style/AppTheme.Light.AppBarOverlay">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            android:theme="@style/LightTextToolbarOverlay"
+            app:title="@string/app_name">
+
+            <ImageView
+                android:id="@+id/top_nav_cancel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ic_close_white_24dp"
+                android:clickable="true" />
+
+            <TextView
+                android:id="@+id/top_nav_sub_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginLeft="20dp"
+                android:text=""
+                android:textSize="18sp" />
+        </androidx.appcompat.widget.Toolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/main__view_pager_container"
+        android:layout_width="match_parent"
+        android:layout_height="738dp"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:background="@color/primary"
+        android:padding="7dp"
+        app:itemBackground="@color/primary"
+        app:itemIconTint="@drawable/bottomnav_color_selector"
+        app:itemTextColor="@drawable/bottomnav_color_selector"
+        app:labelVisibilityMode="labeled"
+        app:menu="@menu/main__bottom_nav"
+        app:elevation="16dp"
+        style="@style/BottomNavigationViewStyle" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab_add_new_item"
+        android:layout_width="74dp"
+        android:layout_height="74dp"
+        android:layout_gravity="bottom|center"
+        android:layout_marginBottom="10dp"
+        android:contentDescription="@string/create_new_file_or_folder"
+        android:src="@drawable/ic_add_white_24dp"
+        app:elevation="20dp"
+        app:maxImageSize="74dp"
+        app:shapeAppearance="@style/ShapeAppearanceOverlay.Material3.FloatingActionButton" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

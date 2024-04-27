@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--suppress AndroidElementNotAllowed -->
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:title="@string/more">
+
+    <PreferenceCategory android:title="@string/save_location">
+        <Preference
+            android:icon="@drawable/ic_save_black_24dp"
+            android:key="@string/pref_key__notebook_directory"
+            android:title="@string/notebook" />
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="@string/edit_mode">
+        <androidx.preference.SeekBarPreference
+            android:defaultValue="15"
+            android:icon="@drawable/ic_format_size_black_24dp"
+            android:key="@string/pref_key__editor_font_size"
+            android:max="36"
+            android:min="1"
+            android:summary="@string/control_font_size_in_editor"
+            android:title="@string/font_size"
+            app:showSeekBarValue="true" />
+        <androidx.preference.SeekBarPreference
+            android:defaultValue="1"
+            android:icon="@drawable/ic_keyboard_tab_black_24dp"
+            android:key="@string/pref_key__tab_width_v2"
+            android:max="12"
+            android:summary="@string/amount_of_space_for_tab"
+            android:title="@string/tab_width"
+            app:min="1"
+            app:showSeekBarValue="true" />
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="System mode">
+        <ListPreference
+            android:defaultValue="@string/app_theme_system"
+            android:dialogTitle="@string/theme"
+            android:entries="@array/pref_arrdisp__app_themes"
+            android:entryValues="@array/pref_arrkeys__app_themes"
+            android:icon="@drawable/ic_invert_colors_black_24dp"
+            android:key="@string/pref_key__app_theme"
+            android:summary="%1$s"
+            android:title="@string/theme" />
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="More info">
+        <Preference
+            android:icon="@drawable/ic_info_black_24dp"
+            android:key="@string/pref_key__more_info__help"
+            android:title="@string/help" />
+    </PreferenceCategory>
+
+    <Preference
+        android:icon="@drawable/ic_settings_black_24dp"
+        android:key="@string/pref_key__more_info__settings"
+        android:title="@string/settings" />
+
+
+
+</PreferenceScreen> <!-- Screen -->

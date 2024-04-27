@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+/*#######################################################
+ *
+ *   Maintained 2017-2023 by Gregor Santner <group_29 AT mailbox DOT org>
+ *   License of this file: Apache 2.0
+ *     https://www.apache.org/licenses/LICENSE-2.0
+ *
+#########################################################*/
+-->
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <style name="AppTheme.Unified.StartupFlash" parent="AppTheme.Unified">
+        <item name="android:windowBackground">@color/dark__background</item>
+    </style>
+
+    <style name="AppTheme.Unified" parent="Theme.AppCompat.DayNight.DarkActionBar">
+        <item name="android:windowActionModeOverlay">true</item>
+        <item name="windowActionModeOverlay">true</item>
+        <item name="windowActionBarOverlay">true</item>
+        <item name="android:windowActionBarOverlay">true</item>
+        <item name="windowNoTitle">true</item>
+        <item name="windowActionBar">false</item>
+        <item name="android:actionButtonStyle">@style/LessSpaceActionButtonStyle</item>
+        <item name="preferenceTheme">@style/AppTheme.PreferenceTheme</item>
+        <item name="colorPrimaryDark">@color/primary_dark</item>
+        <item name="android:actionModeBackground">@color/primary_dark</item>
+        <item name="actionModeBackground">@color/primary_dark</item>
+        <item name="colorPrimary">@color/primary</item>
+        <item name="colorAccent">@color/accent</item>
+        <item name="android:windowBackground">@color/background</item>
+    </style>
+
+    <style name="BottomNavigationViewStyle" parent="Widget.Design.BottomNavigationView">
+        <item name="itemHorizontalTranslationEnabled">true</item> <!-- 控制水平位移 -->
+        <item name="itemIconSize">24dp</item> <!-- 设置图标大小 -->
+        <item name="itemPadding">16dp</item> <!-- 设置图标与文字之间的填充 -->
+        <item name="itemIconTint">@color/primary</item> <!-- 设置图标颜色选择器 -->
+        <item name="itemTextColor">@color/primary</item> <!-- 设置文字颜色选择器 -->
+    </style>
+
+    <style name="AppTheme.PreferenceTheme" parent="PreferenceThemeOverlay.v14.Material">
+        <item name="preferenceCategoryStyle">@style/AppTheme.PreferenceTheme.CategoryStyle</item>
+    </style>
+
+    <style name="AppTheme.PreferenceTheme.CategoryStyle" parent="Preference.Category">
+        <item name="android:layout">@layout/opoc_pref_category_text</item>
+    </style>
+
+
+    <style name="LightTextToolbarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar">
+        <item name="android:actionModeBackground">@color/primary_dark</item>
+        <item name="actionModeBackground">@color/primary_dark</item>
+
+        <item name="android:textColorPrimary">@android:color/white</item>
+        <item name="actionMenuTextColor">@android:color/white</item>
+        <item name="android:textColorSecondary">@android:color/white</item>
+    </style>
+
+    <style name="AppTheme.Light.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <!-- reduced spacing -->
+    <style name="LessSpaceActionButtonStyle" parent="Widget.AppCompat.ActionButton">
+        <item name="android:minWidth">1dip</item>
+        <item name="android:paddingLeft">8dip</item>
+        <item name="android:paddingRight">8dip</item>
+        <item name="android:paddingStart">8dip</item>
+        <item name="android:paddingEnd">8dip</item>
+    </style>
+</resources>

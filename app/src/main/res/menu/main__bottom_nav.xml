@@ -1,0 +1,32 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/nav_notebook"
+        android:icon="@drawable/ic_folder_white_24dp"
+        android:title="@string/files" />
+
+
+    <item
+        android:id="@+id/nav_todo"
+        android:icon="@drawable/ic_assignment_turned_in_black_24dp"
+        android:title="@string/todo" />
+
+    <!-- 占位用的透明图标 -->
+    <item
+        android:id="@+id/nav_spacer"
+        android:icon="@android:color/transparent"
+        android:title=""
+        android:enabled="false"
+        android:checkable="false"
+        android:visible="true"
+        android:layout_marginEnd="24dp"/>
+
+    <item
+        android:id="@+id/nav_quicknote"
+        android:icon="@drawable/ic_file_white_24dp"
+        android:title="@string/Templates" />
+
+    <item
+        android:id="@+id/nav_more"
+        android:icon="@drawable/ic_settings_black_24dp"
+        android:title="@string/more" />
+</menu>
