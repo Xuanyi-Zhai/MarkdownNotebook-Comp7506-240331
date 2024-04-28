@@ -1,7 +1,5 @@
 (() => {
-/* begin change from upstream admonition.js */
     document.addEventListener("DOMContentLoaded", function() {
-/* end change */
     let divs = document.getElementsByClassName("adm-block");
     for (let i = 0; i < divs.length; i++) {
         let div = divs[i];
@@ -25,7 +23,5 @@
             }
         }
     }
-/* begin change from upstream admonition.js */
 })
-/* end change */
 })();
