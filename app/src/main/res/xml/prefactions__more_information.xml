@@ -24,6 +24,7 @@
             android:summary="@string/control_font_size_in_editor"
             android:title="@string/font_size"
             app:showSeekBarValue="true" />
+
         <androidx.preference.SeekBarPreference
             android:defaultValue="1"
             android:icon="@drawable/ic_keyboard_tab_black_24dp"
