@@ -100,27 +100,8 @@ public class MoreInfoFragment extends GsPreferenceFragmentBase<AppSettings> {
                     }
                     return true;
                 }
-                case R.string.pref_key__more_info__contributors_public_info: {
-                    try {
-                        _cu.showDialogWithHtmlTextView(getActivity(), R.string.contributors, new GsSimpleMarkdownParser().parse(
-                                getResources().openRawResource(R.raw.contributors),
-                                "", GsSimpleMarkdownParser.FILTER_ANDROID_TEXTVIEW).getHtml());
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    }
-                    return true;
-                }
-                case R.string.pref_key__more_info__copy_build_information: {
-                    _cu.setClipboard(getContext(), preference.getSummary());
-                    GsSimpleMarkdownParser smp = new GsSimpleMarkdownParser();
-                    try {
-                        String html = smp.parse(getResources().openRawResource(R.raw.changelog), "", GsSimpleMarkdownParser.FILTER_ANDROID_TEXTVIEW).getHtml();
-                        _cu.showDialogWithHtmlTextView(getActivity(), R.string.changelog, html);
-                    } catch (Exception ex) {
 
-                    }
-                    return true;
-                }
+
                 case R.string.pref_key__notebook_directory: {
                     MarkorFileBrowserFactory.showFolderDialog(new GsFileBrowserOptions.SelectionListenerAdapter() {
                         @Override
