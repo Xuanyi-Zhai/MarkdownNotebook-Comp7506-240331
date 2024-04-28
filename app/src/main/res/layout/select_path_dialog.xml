@@ -1,13 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><!--
-/*#######################################################
- *
- *   Maintained 2017-2023 by Gregor Santner <group_29 AT mailbox DOT org>
- *
- *   License of this file: Apache 2.0
- *     https://www.apache.org/licenses/LICENSE-2.0
- *
-#########################################################*/
--->
+<?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"

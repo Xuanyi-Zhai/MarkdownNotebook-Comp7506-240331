@@ -86,21 +86,6 @@ public class MoreInfoFragment extends GsPreferenceFragmentBase<AppSettings> {
                     _cu.openWebpageInExternalBrowser(getContext(), getString(R.string.app_source_code_url));
                     return true;
                 }
-                case R.string.pref_key__more_info__project_license: {
-                    _cu.showDialogWithRawFileInWebView(getActivity(), "license.txt", R.string.project_license);
-                    return true;
-                }
-                case R.string.pref_key__more_info__open_source_licenses: {
-                    try {
-                        _cu.showDialogWithHtmlTextView(getActivity(), R.string.licenses, new GsSimpleMarkdownParser().parse(
-                                getResources().openRawResource(R.raw.licenses_3rd_party),
-                                "", GsSimpleMarkdownParser.FILTER_ANDROID_TEXTVIEW).getHtml());
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    }
-                    return true;
-                }
-
 
                 case R.string.pref_key__notebook_directory: {
                     MarkorFileBrowserFactory.showFolderDialog(new GsFileBrowserOptions.SelectionListenerAdapter() {
