@@ -64,26 +64,9 @@ public class MoreInfoFragment extends GsPreferenceFragmentBase<AppSettings> {
                     _cu.showGooglePlayEntryForThisApp(getContext());
                     return true;
                 }
-
-                case R.string.pref_key__more_info__join_community: {
-                    _cu.openWebpageInExternalBrowser(getContext(), getString(R.string.app_community_url));
-                    return true;
-                }
                 case R.string.pref_key__more_info__help: {
                     _cu.openWebpageInExternalBrowser(getContext(),
                             String.format("https://github.com/Xuanyi-Zhai/MarkdownNotebook-Comp7506-240331#readme", getString(R.string.app_name_real).toLowerCase()));
-                    return true;
-                }
-                case R.string.pref_key__more_info__bug_reports: {
-                    _cu.openWebpageInExternalBrowser(getContext(), getString(R.string.app_bugreport_url));
-                    return true;
-                }
-                case R.string.pref_key__more_info__translate: {
-                    _cu.openWebpageInExternalBrowser(getContext(), getString(R.string.app_translate_url));
-                    return true;
-                }
-                case R.string.pref_key__more_info__source_code: {
-                    _cu.openWebpageInExternalBrowser(getContext(), getString(R.string.app_source_code_url));
                     return true;
                 }
 

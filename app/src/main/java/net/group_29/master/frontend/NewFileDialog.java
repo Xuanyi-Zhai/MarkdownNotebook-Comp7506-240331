@@ -25,7 +25,6 @@ import androidx.fragment.app.DialogFragment;
 import net.group_29.master.ApplicationObject;
 import net.group_29.master.R;
 import net.group_29.master.format.todotxt.TodoTxtTask;
-import net.group_29.master.format.wikitext.WikitextActionButtons;
 import net.group_29.master.frontend.textview.HighlightingEditor;
 import net.group_29.master.frontend.textview.TextViewUtils;
 import net.group_29.master.model.AppSettings;
@@ -284,9 +283,6 @@ public class NewFileDialog extends DialogFragment {
             }
             case 6: {
                 return "Content-Type: text/x-zim-wiki\nWiki-Format: zim 0.4\nCreation-Date: 2019-01-28T20:53:47+01:00\n\n====== Zim Wiki ======\nLet me try to gather a list of the formatting options Zim provides.\n\n====== Head 1 ======\n\n===== Head 2 =====\n\n==== Head 3 ====\n\n=== Head 4 ===\n\n== Head 5 ==\n\n**Bold**\n//italics//\n__marked (yellow Background)__\n~~striked~~\n\n* Unordered List\n* second item\n	* [[Sub-Item]]\n		* Subsub-Item\n			* and one more sub\n* Back to first indent level\n\n1. ordered list\n2. second item\n	a. item 2a\n		1. Item 2a1\n		2. Item 2a2\n	b. item 2b\n		1. 2b1\n			a. 2b1a\n3. an so on...\n\n[ ] Checklist\n[ ] unchecked item\n[*] checked item\n[x] crossed item\n[>] Item marked with a yellow left-to-right-arrow\n[ ] another unchecked item\n\n\nThis ist ''preformatted text'' inline.\n\n'''\nThis is a preformatted text block.\nIt spans multiple lines.\nAnd it's visually indented.\n'''\n\nWe also have _{subscript} and ^{superscript}.\n\nIt seems there is no way to combine those styles.\n//**this is simply italic**// and you can see the asterisks.\n**//This is simply bold//** and you can see the slashes.\n__**This is simply marked yellow**__ and you can see the asterisks.\n\nThis is a web link: [[https://github.com/gsantner/markor|Markor on Github]]\nLinks inside the Zim Wiki project can be made by simply using the [[Page Name]] in double square brackets.\nThis my also contain some hierarchy information, like [[Folder:Subfolder:Document Name]]\n\n\nThis zim wiki reference file was created for the [[https://github.com/gsantner/markor|Markor]] project by [[https://github.com/gsantner|Gregor Santner]] and is licensed [[https://creativecommons.org/publicdomain/zero/1.0/legalcode|Creative Commons Zero 1.0]] (public domain). File revision 1.";
-            }
-            case 7: {
-                return WikitextActionButtons.createWikitextHeaderAndTitleContents(fileName.replaceAll("(\\.((zim)|(txt)))*$", "").trim().replace(' ', '_'), new Date(), getResources().getString(R.string.created));
             }
             case 8: {
                 final String header = TextViewUtils.interpolateEscapedDateTime("---\ntags: []\ncreated: '`yyyy-MM-dd`'\ntitle: ''\n---\n\n");

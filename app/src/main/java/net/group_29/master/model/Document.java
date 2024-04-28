@@ -75,16 +75,8 @@ public class Document implements Serializable {
             setFormat(FormatRegistry.FORMAT_KEYVALUE);
         } else if (FormatRegistry.CONVERTER_MARKDOWN.isFileOutOfThisFormat(fnlower)) {
             setFormat(FormatRegistry.FORMAT_MARKDOWN);
-        } else if (FormatRegistry.CONVERTER_CSV.isFileOutOfThisFormat(fnlower)) {
-            setFormat(FormatRegistry.FORMAT_CSV);
-        } else if (FormatRegistry.CONVERTER_ASCIIDOC.isFileOutOfThisFormat(fnlower)) {
-            setFormat(FormatRegistry.FORMAT_ASCIIDOC);
-        } else if (FormatRegistry.CONVERTER_WIKITEXT.isFileOutOfThisFormat(getPath())) {
-            setFormat(FormatRegistry.FORMAT_WIKITEXT);
         } else if (FormatRegistry.CONVERTER_EMBEDBINARY.isFileOutOfThisFormat(getPath())) {
             setFormat(FormatRegistry.FORMAT_EMBEDBINARY);
-        } else if (FormatRegistry.CONVERTER_ORGMODE.isFileOutOfThisFormat(getPath())) {
-            setFormat(FormatRegistry.FORMAT_ORGMODE);
         } else {
             setFormat(FormatRegistry.FORMAT_PLAIN);
         }

@@ -8,21 +8,13 @@ import androidx.annotation.NonNull;
 
 import net.group_29.master.ApplicationObject;
 import net.group_29.master.R;
-import net.group_29.master.format.asciidoc.AsciidocActionButtons;
-import net.group_29.master.format.asciidoc.AsciidocSyntaxHighlighter;
-import net.group_29.master.format.asciidoc.AsciidocTextConverter;
 import net.group_29.master.format.binary.EmbedBinaryTextConverter;
-import net.group_29.master.format.csv.CsvSyntaxHighlighter;
-import net.group_29.master.format.csv.CsvTextConverter;
 import net.group_29.master.format.keyvalue.KeyValueSyntaxHighlighter;
 import net.group_29.master.format.keyvalue.KeyValueTextConverter;
 import net.group_29.master.format.markdown.MarkdownActionButtons;
 import net.group_29.master.format.markdown.MarkdownReplacePatternGenerator;
 import net.group_29.master.format.markdown.MarkdownSyntaxHighlighter;
 import net.group_29.master.format.markdown.MarkdownTextConverter;
-import net.group_29.master.format.orgmode.OrgmodeActionButtons;
-import net.group_29.master.format.orgmode.OrgmodeSyntaxHighlighter;
-import net.group_29.master.format.orgmode.OrgmodeTextConverter;
 import net.group_29.master.format.plaintext.PlaintextActionButtons;
 import net.group_29.master.format.plaintext.PlaintextSyntaxHighlighter;
 import net.group_29.master.format.plaintext.PlaintextTextConverter;
@@ -30,10 +22,6 @@ import net.group_29.master.format.todotxt.TodoTxtActionButtons;
 import net.group_29.master.format.todotxt.TodoTxtAutoTextFormatter;
 import net.group_29.master.format.todotxt.TodoTxtSyntaxHighlighter;
 import net.group_29.master.format.todotxt.TodoTxtTextConverter;
-import net.group_29.master.format.wikitext.WikitextActionButtons;
-import net.group_29.master.format.wikitext.WikitextReplacePatternGenerator;
-import net.group_29.master.format.wikitext.WikitextSyntaxHighlighter;
-import net.group_29.master.format.wikitext.WikitextTextConverter;
 import net.group_29.master.frontend.textview.AutoTextFormatter;
 import net.group_29.master.frontend.textview.ListHandler;
 import net.group_29.master.frontend.textview.SyntaxHighlighterBase;
@@ -57,27 +45,19 @@ public class FormatRegistry {
 
 
     public final static MarkdownTextConverter CONVERTER_MARKDOWN = new MarkdownTextConverter();
-    public final static WikitextTextConverter CONVERTER_WIKITEXT = new WikitextTextConverter();
+
     public final static TodoTxtTextConverter CONVERTER_TODOTXT = new TodoTxtTextConverter();
     public final static KeyValueTextConverter CONVERTER_KEYVALUE = new KeyValueTextConverter();
-    public final static CsvTextConverter CONVERTER_CSV = new CsvTextConverter();
     public final static PlaintextTextConverter CONVERTER_PLAINTEXT = new PlaintextTextConverter();
-    public final static AsciidocTextConverter CONVERTER_ASCIIDOC = new AsciidocTextConverter();
     public final static EmbedBinaryTextConverter CONVERTER_EMBEDBINARY = new EmbedBinaryTextConverter();
-    public final static OrgmodeTextConverter CONVERTER_ORGMODE = new OrgmodeTextConverter();
 
 
     // Order here is used to **determine** format by it's file extension and/or content heading
     private final static TextConverterBase[] CONVERTERS = new TextConverterBase[]{
             CONVERTER_MARKDOWN,
-            CONVERTER_CSV,
             CONVERTER_TODOTXT,
-            CONVERTER_WIKITEXT,
             CONVERTER_KEYVALUE,
-            CONVERTER_ASCIIDOC,
             CONVERTER_PLAINTEXT,
-            CONVERTER_EMBEDBINARY,
-            CONVERTER_ORGMODE,
     };
 
     public static boolean isFileSupported(final File file, final boolean... textOnly) {
@@ -106,10 +86,6 @@ public class FormatRegistry {
 
         switch (formatId) {
             case FORMAT_CSV: {
-                format._converter = CONVERTER_CSV;
-                format._highlighter = new CsvSyntaxHighlighter(appSettings);
-
-                // TODO k3b ????
                 format._textActions = new PlaintextActionButtons(context, document);
                 format._autoFormatInputFilter = new AutoTextFormatter(MarkdownReplacePatternGenerator.formatPatterns);
                 format._autoFormatTextWatcher = new ListHandler(MarkdownReplacePatternGenerator.formatPatterns);
@@ -119,14 +95,6 @@ public class FormatRegistry {
                 format._converter = CONVERTER_PLAINTEXT;
                 format._highlighter = new PlaintextSyntaxHighlighter(appSettings);
                 format._textActions = new PlaintextActionButtons(context, document);
-                format._autoFormatInputFilter = new AutoTextFormatter(MarkdownReplacePatternGenerator.formatPatterns);
-                format._autoFormatTextWatcher = new ListHandler(MarkdownReplacePatternGenerator.formatPatterns);
-                break;
-            }
-            case FORMAT_ASCIIDOC: {
-                format._converter = CONVERTER_ASCIIDOC;
-                format._highlighter = new AsciidocSyntaxHighlighter(appSettings);
-                format._textActions = new AsciidocActionButtons(context, document);
                 format._autoFormatInputFilter = new AutoTextFormatter(MarkdownReplacePatternGenerator.formatPatterns);
                 format._autoFormatTextWatcher = new ListHandler(MarkdownReplacePatternGenerator.formatPatterns);
                 break;
@@ -144,26 +112,10 @@ public class FormatRegistry {
                 format._textActions = new PlaintextActionButtons(context, document);
                 break;
             }
-            case FORMAT_WIKITEXT: {
-                format._converter = CONVERTER_WIKITEXT;
-                format._highlighter = new WikitextSyntaxHighlighter(appSettings);
-                format._textActions = new WikitextActionButtons(context, document);
-                format._autoFormatInputFilter = new AutoTextFormatter(WikitextReplacePatternGenerator.formatPatterns);
-                format._autoFormatTextWatcher = new ListHandler(WikitextReplacePatternGenerator.formatPatterns);
-                break;
-            }
             case FORMAT_EMBEDBINARY: {
                 format._converter = CONVERTER_EMBEDBINARY;
                 format._highlighter = new PlaintextSyntaxHighlighter(appSettings);
                 format._textActions = new PlaintextActionButtons(context, document);
-                break;
-            }
-            case FORMAT_ORGMODE: {
-                format._converter = CONVERTER_ORGMODE;
-                format._highlighter = new OrgmodeSyntaxHighlighter(appSettings);
-                format._textActions = new OrgmodeActionButtons(context, document);
-                format._autoFormatInputFilter = new AutoTextFormatter(MarkdownReplacePatternGenerator.formatPatterns);
-                format._autoFormatTextWatcher = new ListHandler(MarkdownReplacePatternGenerator.formatPatterns);
                 break;
             }
             default:
