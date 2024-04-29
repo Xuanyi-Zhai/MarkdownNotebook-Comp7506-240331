@@ -1,29 +1,15 @@
-<?xml version="1.0" encoding="utf-8"?><!--
-/*#######################################################
- *
- *   Maintained 2017-2023 by Gregor Santner <group_29 AT mailbox DOT org>
- *   License of this file: Apache 2.0
- *     https://www.apache.org/licenses/LICENSE-2.0
- *
-#########################################################*/
--->
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string-array name="pref_arrdisp__app_themes" translatable="false">
         <item translatable="false">System</item>
-        <item translatable="false">Auto</item>
-        <item translatable="false">Auto (09:00 - 17:00)</item>
         <item translatable="false">@string/light</item>
         <item translatable="false">@string/dark</item>
-        <item translatable="false">@string/black</item>
     </string-array>
 
     <string-array name="pref_arrkeys__app_themes" translatable="false">
         <item translatable="false">system</item>
-        <item translatable="false">auto</item>
-        <item translatable="false">autocompat</item>
         <item translatable="false">light</item>
         <item translatable="false">dark</item>
-        <item translatable="false">dark-black</item>
     </string-array>
 
     <string-array name="pref_arrdisp__editor_basic_color_schemes" translatable="false">
@@ -102,9 +88,6 @@
         <item translatable="false">@string/plaintext</item>
         <item translatable="false">@string/todo_txt</item>
         <item translatable="false">@string/wikitext</item>
-        <item translatable="false">@string/asciidoc</item>
-        <item translatable="false">@string/csv</item>
-        <item translatable="false">@string/orgmode</item>
         <item translatable="false">@string/none</item>
     </string-array>
 
@@ -113,16 +96,7 @@
         <item translatable="false">@string/empty_file</item>
         <item translatable="false">@string/file_template__md_markor_markdown_reference</item>
         <item translatable="false">@string/file_template__txt_todo_sample</item>
-        <item translatable="false">@string/file_template__md_jekyll_post</item>
         <item translatable="false">@string/file_template__md_cooking_recipe</item>
-        <item translatable="false">@string/file_template__md_presentation_beamer</item>
-        <item translatable="false">@string/file_template__zim_wiki_reference</item>
-        <item translatable="false">@string/file_template__zim_wiki_empty</item>
-        <item translatable="false">@string/file_template__md_hugo_post_front_matter</item>
-        <item translatable="false">@string/file_template__md_zettelkasten</item>
-        <item translatable="false">@string/file_template__ad_jekyll_post</item>
-        <item translatable="false">@string/file_template__csv_sample</item>
-        <item translatable="false">@string/file_template__orgmode_reference</item>
     </string-array>
 
     <string-array name="new_file_types__file_extension" translatable="false">
@@ -130,9 +104,6 @@
         <item translatable="false">.txt</item>
         <item translatable="false">.todo.txt</item>
         <item translatable="false">.txt</item>
-        <item translatable="false">.adoc</item>
-        <item translatable="false">.csv</item>
-        <item translatable="false">.org</item>
         <item translatable="false" />
     </string-array>
 
