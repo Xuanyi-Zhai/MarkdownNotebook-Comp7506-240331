@@ -10,7 +10,6 @@ local.properties
 settings.gradle
 gradlew
 gradlew.bat
-LICENSE.md
 app/build
 app/.gitignore
 app/pom.xml
@@ -20,4 +19,3 @@ app/proguard-rules.pro
 circle.yml
 CODE_OF_CONDUCT*
 gradle.properties
-LICENSE*

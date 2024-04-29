@@ -39,10 +39,6 @@ allprojects {
         google()
     }
 
-    tasks.matching { task -> task.name.matches('.*generate.*Resources') }.all {
-        task -> task.dependsOn copyRepoFiles
-    }
-
     tasks.matching { it instanceof Test }.all { // Enable unit test output, html+xml output
         testLogging.events "passed", "skipped", "failed", "standardOut", "standardError"
         testLogging.showStandardStreams = true
@@ -53,13 +49,6 @@ allprojects {
 
 task clean(type: Delete) {
     delete rootProject.buildDir
-}
-
-final String[] ROOT_TO_RAW_COPYFILES = ["README.md", "LICENSE.txt", "LICENSE.md", "LICENSE"]
-task copyRepoFiles(type: Copy) {
-    from rootProject.files(ROOT_TO_RAW_COPYFILES)
-    into "app/src/main/res/raw"
-    rename { String fileName -> fileName.replace(fileName, fileName.toLowerCase()) }
 }
 
 
