@@ -62,7 +62,6 @@ public class MarkdownActionButtons extends ActionButtonBase {
                 new ActionItem(R.string.abid_markdown_h1, R.drawable.format_header_1, R.string.heading_1),
                 new ActionItem(R.string.abid_markdown_h2, R.drawable.format_header_2, R.string.heading_2),
                 new ActionItem(R.string.abid_markdown_h3, R.drawable.format_header_3, R.string.heading_3),
-                new ActionItem(R.string.abid_markdown_horizontal_line, R.drawable.ic_more_horiz_black_24dp, R.string.horizontal_line),
                 new ActionItem(R.string.abid_common_indent, R.drawable.ic_format_indent_increase_black_24dp, R.string.indent),
                 new ActionItem(R.string.abid_common_deindent, R.drawable.ic_format_indent_decrease_black_24dp, R.string.deindent)
         );
