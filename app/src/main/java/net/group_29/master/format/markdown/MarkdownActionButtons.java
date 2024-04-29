@@ -35,20 +35,11 @@ public class MarkdownActionButtons extends ActionButtonBase {
     private final Set<Integer> _disabledHeadings = new HashSet<>();
 
     public static final String LINE_PREFIX = "^(>\\s|#{1,6}\\s|\\s*[-*+](?:\\s\\[[ xX]\\])?\\s|\\s*\\d+[.)]\\s)?";
-
-    // Patterns used for surrounding entire lines
-    // ----------------------------------------------------------------------------
-    // TODO - make these more intelligent. Should work with combined delimiters.
-    // Goup 1: Prefix, Group 2: Pre-space, Group 3: Open delim, Group 4: Text, Group 5: Close delim, Group 6: Post-space
     public static final Pattern LINE_BOLD = Pattern.compile(LINE_PREFIX + "(\\s*)(\\*\\*)(\\S.*\\S)(\\3)(\\s*)$");
     public static final Pattern LINE_ITALIC = Pattern.compile(LINE_PREFIX + "(\\s*)(_)(\\S.*\\S)(\\3)(\\s*)$");
     public static final Pattern LINE_STRIKEOUT = Pattern.compile(LINE_PREFIX + "(\\s*)(~~)(\\S.*\\S)(\\3)(\\s*)$");
-    // Group 1: Prefix, Group 2: Pre-space, Group 3: Text, Group 4: Post-space
     public static final Pattern LINE_NONE = Pattern.compile(LINE_PREFIX + "(\\s*)(.*?)(\\s*)$");
-    // ----------------------------------------------------------------------------
-
     public static final Pattern CHECKED_LIST_LINE = Pattern.compile("^(\\s*)(([-*+])\\s\\[([xX ])\\]\\s)");
-
     public MarkdownActionButtons(@NonNull Context context, Document document) {
         super(context, document);
     }

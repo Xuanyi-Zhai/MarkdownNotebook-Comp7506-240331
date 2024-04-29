@@ -114,10 +114,6 @@
                             android:icon="@drawable/ic_file_white_24dp"
                             android:title="@string/plaintext" />
                         <item
-                            android:id="@string/action_format_asciidoc"
-                            android:icon="@drawable/asciidoc_icon_black_24dp"
-                            android:title="@string/asciidoc" />
-                        <item
                             android:id="@string/action_format_markdown"
                             android:icon="@drawable/gs_markdown_black_24dp"
                             android:title="@string/markdown" />
@@ -130,17 +126,9 @@
                             android:icon="@drawable/fountain_pen"
                             android:title="@string/wikitext" />
                         <item
-                            android:id="@string/action_format_csv"
-                            android:icon="@drawable/ic_view_module_black_24dp"
-                            android:title="@string/csv" />
-                        <item
                             android:id="@string/action_format_embedbinary"
                             android:icon="@drawable/ic_image_black_24dp"
                             android:title="@string/embed_binary" />
-                        <item
-                            android:id="@string/action_format_orgmode"
-                            android:icon="@drawable/ic_org_mode_file"
-                            android:title="@string/orgmode" />
                     </group>
                 </menu>
             </item>
