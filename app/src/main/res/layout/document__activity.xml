@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:theme="@style/AppTheme.Unified"
+    android:title="@string/Templates"
     tools:context="net.group_29.master.activity.DocumentActivity">
 
     <com.google.android.material.appbar.AppBarLayout

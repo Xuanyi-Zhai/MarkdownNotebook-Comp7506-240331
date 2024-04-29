@@ -1,11 +1,3 @@
-/*#######################################################
- *
- *   Maintained 2017-2023 by Gregor Santner <group_29 AT mailbox DOT org>
- *
- *   License of this file: Apache 2.0
- *     https://www.apache.org/licenses/LICENSE-2.0
- *
-#########################################################*/
 apply plugin: 'com.android.application'
 if (enable_plugin_kotlin) {
     apply plugin: 'kotlin-android'
@@ -15,7 +7,6 @@ if (enable_plugin_kotlin) {
 
 rootProject.ext.version_minSdk = 16
 
-// https://github.com/vsch/flexmark-java/releases
 ext.version_library_flexmark = "0.42.14"
 
 android {

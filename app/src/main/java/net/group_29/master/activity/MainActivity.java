@@ -346,8 +346,8 @@ public class MainActivity extends MarkorBaseActivity implements GsFileBrowserFra
     public String getPosTitle(final int pos) {
         if (pos == 0) return getFileBrowserTitle();
         if (pos == 1) return getString(R.string.todo);
-        if (pos == 2) return getString(R.string.quicknote);
-        if (pos == 3) return getString(R.string.more);
+        if (pos == 4) return getString(R.string.more);
+        if (pos == 3) return getString(R.string.Templates);
         return "";
     }
 
