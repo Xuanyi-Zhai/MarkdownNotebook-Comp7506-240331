@@ -60,10 +60,6 @@ public class MoreInfoFragment extends GsPreferenceFragmentBase<AppSettings> {
                     _cu.animateToActivity(activity, SettingsActivity.class, false, 124);
                     return true;
                 }
-                case R.string.pref_key__more_info__rate_app: {
-                    _cu.showGooglePlayEntryForThisApp(getContext());
-                    return true;
-                }
                 case R.string.pref_key__more_info__help: {
                     _cu.openWebpageInExternalBrowser(getContext(),
                             String.format("https://github.com/Xuanyi-Zhai/MarkdownNotebook-Comp7506-240331#readme", getString(R.string.app_name_real).toLowerCase()));
